@@ -1,9 +1,17 @@
 import java.io.*;
 
 public class Parser {
-    private final BufferedReader bufferedReader;
+    private BufferedReader bufferedReader;
     private Command currentCommand;
     public Parser(File file) throws FileNotFoundException {
+        bufferedReader = new BufferedReader(new FileReader(file));
+    }
+
+    public Parser() {
+
+    }
+
+    public void setFile(File file) throws FileNotFoundException {
         bufferedReader = new BufferedReader(new FileReader(file));
     }
 
@@ -23,7 +31,7 @@ public class Parser {
     private void tryParseCommand() throws IOException {
         String line;
         while ((line = bufferedReader.readLine()) != null) {
-            line = line.split("//")[0].trim().toLowerCase();
+            line = line.split("//", 2)[0].trim();
             if(line.equals("")  || line.startsWith("//"))
                 continue;
             if(ArithmeticCommand.contains(line))
@@ -58,7 +66,7 @@ public class Parser {
             }
             else if(line.startsWith("return")) {
                 String[] splittedLine = line.split(" ");
-                currentCommand = new Command(CommandType.C_RETURN, splittedLine[1], null, line);
+                currentCommand = new Command(CommandType.C_RETURN, null, null, line);
             }
             break;
         }

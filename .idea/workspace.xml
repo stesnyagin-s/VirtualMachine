@@ -4,28 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f9c1a68-db55-44d2-bf11-d21e478f6475" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BasicLoop.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BasicTest.asm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BasicTest.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FibonacciSeries.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PointerTest.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SimpleAdd.asm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SimpleAdd.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StackTest.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StaticTest.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VirtualMachine.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ArithmeticCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CodeWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CommandType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VMTranslator.java" afterDir="false" />
+    <list default="true" id="2f9c1a68-db55-44d2-bf11-d21e478f6475" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/SimpleFunction.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sys.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lang.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CodeWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VMTranslator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VMTranslator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,26 +37,26 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Semyon/IdeaProjects/VirtualMachine&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "true",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Semyon/Downloads/nand2tetris/nand2tetris/projects/08/FunctionCalls/NestedCall",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
@@ -80,10 +66,11 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="VMTranslator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="VMTranslator" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="VMTranslator" />
       <module name="VirtualMachine" />
-      <option name="PROGRAM_PARAMETERS" value="FibonacciSeries.vm" />
+      <option name="PROGRAM_PARAMETERS" value="SimpleFunction" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads/nand2tetris/nand2tetris/projects/08/FunctionCalls" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -112,8 +99,23 @@
       <workItem from="1654190267466" duration="2301000" />
       <workItem from="1654427992176" duration="346000" />
       <workItem from="1654432981052" duration="4846000" />
-      <workItem from="1654537457073" duration="6096000" />
+      <workItem from="1654537457073" duration="7778000" />
+      <workItem from="1654718434362" duration="1564000" />
+      <workItem from="1654935517898" duration="2432000" />
+      <workItem from="1654942754986" duration="29985000" />
+      <workItem from="1655128287424" duration="402000" />
+      <workItem from="1655408285428" duration="11286000" />
+      <workItem from="1655484830427" duration="4857000" />
+      <workItem from="1655544590046" duration="10007000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1654544018415</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654544018415</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,13 +132,27 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Parser.java</url>
-          <line>36</line>
+          <line>44</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Parser.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Parser.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
